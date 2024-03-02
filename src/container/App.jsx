@@ -17,7 +17,9 @@ const App = () => {
     // Initial call to start moving the ISS on the map
     const moveISS = async function () {
       try {
-        const response = await fetch('http://api.open-notify.org/iss-now.json');
+        // const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+        // const issApi = ;
+        const response = await fetch('/api/iss-now');
         const data = await response.json();
         const lat = parseFloat(data.iss_position.latitude); //Just to be safe
         const lng = parseFloat(data.iss_position.longitude); //Just to be safe
