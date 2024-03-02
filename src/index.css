@@ -1,0 +1,10 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Audiowide', sans-serif;
+  background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%); /* Adjusted for a darker theme */
+  color: #fff; /* This ensures the text is readable on a dark background */
+}
+
+

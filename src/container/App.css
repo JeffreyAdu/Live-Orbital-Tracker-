@@ -1,0 +1,93 @@
+
+
+.leaflet-layer,
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out,
+.leaflet-control-attribution {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+
+  
+.astronaut-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust card size */
+    gap: 20px; /* Adjust the gap to your liking */
+    justify-items: center; /* Centers the cards in their cell */
+    align-items: center; /* Vertically aligns the cards */
+    padding: 20px; /* Adds some padding around the container */
+}
+
+.header-box {
+    background-color: #1b1b1bb3; /* Dark background for the box */
+    color: #fff; /* Light text for contrast */
+    padding: 10px 20px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners for the box */
+    margin: 0 auto; /* Center the box and add some margin */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    display: inline-block; /* Only as wide as necessary */
+    max-width: 80%; /* Maximum width of the box */
+}
+
+
+  
+.box {
+    width: 60vmin;
+    height: 50vmin;
+    display: grid;
+    place-content: center;
+    color: white;
+    text-shadow: 0 1px 0 #000;
+
+    --border-angle: 0turn;
+    --main-bg: conic-gradient(
+      from var(--border-angle),
+      #213,
+      #112 5%,
+      #112 60%,
+      #213 95%
+    );
+
+    border: solid 15px transparent;
+    border-radius: 2em;
+    --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent);
+
+    background: 
+        var(--main-bg) padding-box,
+        var(--gradient-border) border-box, 
+        var(--main-bg) border-box;
+
+    background-position: center center;
+    animation: bg-spin 5s linear infinite;
+    @keyframes bg-spin {
+        to {
+        --border-angle: 1turn;
+        }
+    }
+
+    &:hover {
+        animation-play-state: paused;
+      }
+    
+    
+}
+
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+.header-fullwidth {
+    width: 100%;
+    background-color: #003366; /* Dark blue */
+    color: #ffffff; /* White text for contrast */
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+}
+  
+.live-orbital-tracker {
+    color: #7DF9FF; /* Deep space purple */
+    text-align: center;
+  }
