@@ -1,3 +1,5 @@
 /api/iss-now  http://api.open-notify.org/iss-now.json  200
 
+/api/astros  http://api.open-notify.org/astros.json  200
+
 

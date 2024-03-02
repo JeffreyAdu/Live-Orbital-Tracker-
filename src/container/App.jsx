@@ -41,7 +41,7 @@ const App = () => {
     moveISS();
     const peopleInSpace = async function(){
       try{
-        const secondResponse = await fetch('http://api.open-notify.org/astros.json');
+        const secondResponse = await fetch('/api/astros');
         const data = await secondResponse.json();
         // const nameOfAstraunots = data.people.name;
         setspaceIndividuals(data);
